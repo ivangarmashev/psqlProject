@@ -4,20 +4,12 @@
     <projectFile>psqlProject/psqlProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8bdf247-ab03-430c-8ae3-41990824feb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject/DbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/psqlProject/psqlProject.csproj" afterDir="false" />
+    <list default="true" id="a8bdf247-ab03-430c-8ae3-41990824feb1" name="Default Changelist" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/psqlProject/SQLApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psqlProject/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/DbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psqlProject/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/Log.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psqlProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +19,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CCFF5FA1-D766-46F9-962A-BF4CC8D2DF01/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2EF6561A-D0E9-4041-94EF-EDAA489D28EE/38E/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/2EF6561A-D0E9-4041-94EF-EDAA489D28EE/8d/0475edb2/02000675pdb.il" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/psqlProject/1234.cs" />
       <option value="$PROJECT_DIR$/psqlProject/User.cs" />
       <option value="$PROJECT_DIR$/psqlProject/DbContext.cs" />
+      <option value="$PROJECT_DIR$/psqlProject/Api.cs" />
+      <option value="$PROJECT_DIR$/psqlProject/Log.cs" />
       <option value="$PROJECT_DIR$/psqlProject/Program.cs" />
+      <option value="$PROJECT_DIR$/psqlProject/SQLApi.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v8cCbMnVz4g89FkAgqVuL5pRqt" />
@@ -77,8 +85,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625947030185</updated>
-      <workItem from="1625947076023" duration="2762000" />
+      <workItem from="1625947076023" duration="10514000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1625994452034</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625994452034</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,5 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
