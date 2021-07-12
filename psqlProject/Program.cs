@@ -12,6 +12,13 @@ namespace psqlProject
             SqlApi api = new SqlApi();
             int id = api.SaveLog(DateTime.Now,"Authentication successful", "INFO", "server");
             Console.WriteLine(id);
+            DateTime date1 = new DateTime(2021, 7, 20, 18, 30, 25);
+            DateTime date2 = new DateTime(2060, 7, 20, 18, 30, 25);
+            foreach (var VARIABLE in api.SearchByDate(date1, date2))
+            {
+                Console.WriteLine(VARIABLE.Date);
+            }
+            
             // using (ApplicationContext db = new ApplicationContext())
             // {
             //     Log log1 = new Log { Date = DateTime.Now, Message = "Authentication successful",

@@ -4,12 +4,11 @@
     <projectFile>psqlProject/psqlProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8bdf247-ab03-430c-8ae3-41990824feb1" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/psqlProject/SQLApi.cs" afterDir="false" />
+    <list default="true" id="a8bdf247-ab03-430c-8ae3-41990824feb1" name="Default Changelist" comment="Adding event to the database has been added to the api">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psqlProject/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/DbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psqlProject/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/Log.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/psqlProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psqlProject/SQLApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/SQLApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psqlProject/User.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CCFF5FA1-D766-46F9-962A-BF4CC8D2DF01/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2EF6561A-D0E9-4041-94EF-EDAA489D28EE/38E/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ivangarmasev/RiderProjects/Messanger/psqlProject/psqlProject/Log.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/2EF6561A-D0E9-4041-94EF-EDAA489D28EE/8d/0475edb2/02000675pdb.il" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -39,8 +39,8 @@
       <option value="$PROJECT_DIR$/psqlProject/DbContext.cs" />
       <option value="$PROJECT_DIR$/psqlProject/Api.cs" />
       <option value="$PROJECT_DIR$/psqlProject/Log.cs" />
-      <option value="$PROJECT_DIR$/psqlProject/Program.cs" />
       <option value="$PROJECT_DIR$/psqlProject/SQLApi.cs" />
+      <option value="$PROJECT_DIR$/psqlProject/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v8cCbMnVz4g89FkAgqVuL5pRqt" />
@@ -85,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625947030185</updated>
-      <workItem from="1625947076023" duration="10514000" />
+      <workItem from="1625947076023" duration="13114000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625994452034</created>
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625994452034</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding event to the database has been added to the api">
+      <created>1626006482916</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626006482917</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="Adding event to the database has been added to the api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding event to the database has been added to the api" />
   </component>
 </project>

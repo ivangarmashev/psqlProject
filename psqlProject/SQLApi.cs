@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace psqlProject
 {
@@ -22,5 +24,23 @@ namespace psqlProject
                 return log.Id;
             }
         }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <returns></returns>
+        public List<Log> SearchByDate(DateTime startDate, DateTime endDate)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var logs = db.Logs.Where(p => p.Date > startDate && p.Date < endDate).ToList();
+                return logs;
+            }
+        }
+        
+        
+        
     }
 }
