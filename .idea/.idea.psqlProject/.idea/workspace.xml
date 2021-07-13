@@ -4,11 +4,10 @@
     <projectFile>psqlProject/psqlProject.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8bdf247-ab03-430c-8ae3-41990824feb1" name="Default Changelist" comment="">
+    <list default="true" id="a8bdf247-ab03-430c-8ae3-41990824feb1" name="Default Changelist" comment="Fixed upper/lower case">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.psqlProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psqlProject/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/DbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/psqlProject/LogApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/LogApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psqlProject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psqlProject/Stat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/psqlProject/Stat.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CCFF5FA1-D766-46F9-962A-BF4CC8D2DF01/6/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2EF6561A-D0E9-4041-94EF-EDAA489D28EE/38E/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ivangarmasev/RiderProjects/Messanger/psqlProject/psqlProject/LogApi.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/2EF6561A-D0E9-4041-94EF-EDAA489D28EE/8d/0475edb2/02000675pdb.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4D1F2224-9BBE-4676-A871-766038953138/347/Check.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -39,9 +39,9 @@
       <option value="$PROJECT_DIR$/psqlProject/Api.cs" />
       <option value="$PROJECT_DIR$/psqlProject/SQLApi.cs" />
       <option value="$PROJECT_DIR$/psqlProject/Log.cs" />
-      <option value="$PROJECT_DIR$/psqlProject/DbContext.cs" />
       <option value="$PROJECT_DIR$/psqlProject/Stat.cs" />
       <option value="$PROJECT_DIR$/psqlProject/Program.cs" />
+      <option value="$PROJECT_DIR$/psqlProject/DbContext.cs" />
       <option value="$PROJECT_DIR$/psqlProject/LogApi.cs" />
     </changedPaths>
   </component>
@@ -91,7 +91,7 @@
       <updated>1625947030185</updated>
       <workItem from="1625947076023" duration="21707000" />
       <workItem from="1626125354852" duration="6728000" />
-      <workItem from="1626176525110" duration="3570000" />
+      <workItem from="1626176525110" duration="4682000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1625994452034</created>
@@ -128,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626163653983</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed upper/lower case">
+      <created>1626181100324</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626181100324</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +162,7 @@
     <MESSAGE value="Search by date has been added to the api" />
     <MESSAGE value="+ Searh by:&#10;   text&#10;   level&#10;+ Remove element&#10;+ Getting statistics" />
     <MESSAGE value="+ Searh by:&#10;    text&#10;    level&#10;+ Remove element&#10;+ Getting statistics" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Searh by:&#10;    text&#10;    level&#10;+ Remove element&#10;+ Getting statistics" />
+    <MESSAGE value="Fixed upper/lower case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed upper/lower case" />
   </component>
 </project>

@@ -24,7 +24,7 @@ namespace psqlProject
         /// <returns>The unique id (primary key) of the added event</returns>
         public int SaveLog(DateTime date, string message, string level, string source)
         {
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(ConnectString))
             {
                 Log log = new Log {Date = date, Message = message, Level = level.ToUpper(), Source = source.ToLower()};
                 db.Add(log);
@@ -42,7 +42,7 @@ namespace psqlProject
         public List<Log> SearchByDate(DateTime startDate, DateTime endDate)
         {           
             List<Log> logs;
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(ConnectString))
             {
                 logs = db.Logs.Where(log => log.Date >= startDate && log.Date <= endDate).ToList();
             }
@@ -58,7 +58,7 @@ namespace psqlProject
         public List<Log> SearchByText(string text)
         {
             List<Log> logs;
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(ConnectString))
             {
                 logs = db.Logs.Where(log => log.Message.ToLower().Contains(text.ToLower()) || log.Source.ToLower().Contains(text.ToLower())).ToList();
             }
@@ -74,7 +74,7 @@ namespace psqlProject
         public List<Log> SearchByLevel(string text)
         {
             List<Log> logs;
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(ConnectString))
             {
                 logs = db.Logs.Where(log =>
                     EF.Functions.Like(log.Level, text.ToUpper())).ToList();
@@ -91,7 +91,7 @@ namespace psqlProject
         public int RemoveEvent(List<int> idList)
         {
             int count = 0;
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(ConnectString))
             {
                 foreach (var item in idList)
                 {
@@ -117,7 +117,7 @@ namespace psqlProject
             stat.EventsBySource = new Dictionary<string, int>();
             var levelSet = new HashSet<string>();   // HashSet используется для фильтрации повторяющихся значений
             var sourceSet = new HashSet<string>();
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(ConnectString))
             {
                 stat.CountEvents = db.Logs.Count(); // Получение кол-ва событий в логах
                 
@@ -133,29 +133,10 @@ namespace psqlProject
                 foreach (var item in db.Logs.ToHashSet())   // Получение типов источников
                     sourceSet.Add(item.Source.ToLower());
 
-                // foreach (var source in sourceSet)   // Сохранение количества записей по каждому источнику
-                // {
-                //     var logs = db.Logs.Where(log => log.Source.ToLower() == source.ToLower());
-                //     stat.EventsBySource.Add(source, logs.Count());
-                // }
-                //
-                // foreach (var item in stat.EventsBySource)
-                // {
-                //     Console.WriteLine(item);
-                // }
-                //
-                // stat.EventsBySource.Clear();
-                // stat.EventsBySource = new Dictionary<string, int>();
-
                 foreach (var source in sourceSet)   // Сохранение количества записей по каждому источнику
                 {
                     var logsCount = db.Logs.Count(log => log.Source.ToLower()== source);
                     stat.EventsBySource.Add(source, logsCount);
-                }
-                
-                foreach (var item in stat.EventsBySource)
-                {
-                    Console.WriteLine(item);
                 }
             }
 
