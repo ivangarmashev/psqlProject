@@ -60,8 +60,7 @@ namespace psqlProject
             List<Log> logs;
             using (ApplicationContext db = new ApplicationContext())
             {
-                logs = db.Logs.Where(log =>
-                    EF.Functions.Like(log.Message, $"%{text.ToLower()}%") || EF.Functions.Like(log.Source, $"%{text}%")).ToList();
+                logs = db.Logs.Where(log => log.Message.ToLower().Contains(text.ToLower()) || log.Source.ToLower().Contains(text.ToLower())).ToList();
             }
 
             return logs;
@@ -114,27 +113,49 @@ namespace psqlProject
         public Stat GetStat()
         {
             Stat stat = new Stat();
-            var levelSet = new HashSet<string>();
+            stat.EventsByLevel = new Dictionary<string, int>();
+            stat.EventsBySource = new Dictionary<string, int>();
+            var levelSet = new HashSet<string>();   // HashSet используется для фильтрации повторяющихся значений
             var sourceSet = new HashSet<string>();
             using (ApplicationContext db = new ApplicationContext())
             {
-                stat.CountEvents = db.Logs.Count();
-                foreach (var item in db.Logs.ToHashSet())
-                    levelSet.Add(item.Level);    
+                stat.CountEvents = db.Logs.Count(); // Получение кол-ва событий в логах
                 
-                foreach (var level in levelSet)
+                foreach (var item in db.Logs.ToHashSet())   //Получение видов уровней логгирования
+                    levelSet.Add(item.Level.ToUpper());    
+                
+                foreach (var level in levelSet) // Сохранине количества записей по каждому уровню логгирования
                 {
-                    var logs = db.Logs.Where(log => log.Level == level);
+                    var logs = db.Logs.Where(log => log.Level.ToUpper() == level);
                     stat.EventsByLevel.Add(level, logs.Count());
                 }
                 
-                foreach (var item in db.Logs.ToHashSet())
-                    sourceSet.Add(item.Source);
+                foreach (var item in db.Logs.ToHashSet())   // Получение типов источников
+                    sourceSet.Add(item.Source.ToLower());
 
-                foreach (var source in sourceSet)
+                // foreach (var source in sourceSet)   // Сохранение количества записей по каждому источнику
+                // {
+                //     var logs = db.Logs.Where(log => log.Source.ToLower() == source.ToLower());
+                //     stat.EventsBySource.Add(source, logs.Count());
+                // }
+                //
+                // foreach (var item in stat.EventsBySource)
+                // {
+                //     Console.WriteLine(item);
+                // }
+                //
+                // stat.EventsBySource.Clear();
+                // stat.EventsBySource = new Dictionary<string, int>();
+
+                foreach (var source in sourceSet)   // Сохранение количества записей по каждому источнику
                 {
-                    var logs = db.Logs.Where(log => log.Source == source);
-                    stat.EventsBySource.Add(source, logs.Count());
+                    var logsCount = db.Logs.Count(log => log.Source.ToLower()== source);
+                    stat.EventsBySource.Add(source, logsCount);
+                }
+                
+                foreach (var item in stat.EventsBySource)
+                {
+                    Console.WriteLine(item);
                 }
             }
 

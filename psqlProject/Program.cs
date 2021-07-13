@@ -22,7 +22,7 @@ namespace psqlProject
 
             logsByDate = api.SearchByDate(new DateTime(2020, 12, 12, 12, 12, 1),
                 new DateTime(2021, 12, 12, 12, 12, 1));
-            logsByText = api.SearchByText("o");
+            logsByText = api.SearchByText("aUth");
             logsByLevel = api.SearchByLevel("Info");
 
             countRemove = api.RemoveEvent(new List<int>(){1});

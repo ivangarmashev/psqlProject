@@ -2,12 +2,11 @@ using System.Collections.Generic;
 
 namespace psqlProject
 {
-    
-    public class Stat
+    public struct Stat
     {
-        public int CountEvents = 0;
-        public Dictionary<string, int> EventsByLevel = new Dictionary<string, int>();
-        public Dictionary<string, int> EventsBySource = new Dictionary<string, int>();
+        public int CountEvents;
+        public Dictionary<string, int> EventsByLevel;
+        public Dictionary<string, int> EventsBySource;
     }
 }
 
