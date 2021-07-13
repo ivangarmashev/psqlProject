@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace psqlProject
 {
@@ -9,7 +8,6 @@ namespace psqlProject
 
         public ApplicationContext()
         {
-            // Database.EnsureDeleted();
             Database.EnsureCreated();
             
         }

@@ -9,13 +9,5 @@ namespace psqlProject
         public string Message { get; set; }
         public string Level { get; set; }
         public string Source { get; set; }
-
-        // public Log(DateTime date, string message, string level, string source)
-        // {
-        //     Date = date;
-        //     Message = message;
-        //     Level = level;
-        //     Source = source;
-        // }
     }
 }
